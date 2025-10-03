@@ -1,3 +1,24 @@
-<p>card works!</p>
-<h2>Esto es una tarjeta</h2>
-<p>Aqui van a ir los productos</p>
+<section class="row">
+
+
+    @for (item of allProducts; track $index) {
+
+    <div class="col">
+        <div class="card mb-3" style="max-width: 540px;">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src={{item.image}} class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">{{item.title}}</h5>
+                        <p class="card-text">{{item.description}}</p>
+                        <p class="card-text"><small class="text-body-secondary">{{item.price}}</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    }
+
+</section>

@@ -33,7 +33,7 @@ export class Card implements OnInit {
     this._productService.getProducts().subscribe({
       // manejo de errores -> gestión de respuestas del back
       next: (response : any) => {
-        this.allProducts = response;
+        this.allProducts = response.data;
         console.log(this.allProducts);
        }, //respuestas positivas del back
       error: (error : any) => { 
