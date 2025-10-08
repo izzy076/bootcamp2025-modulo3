@@ -3,6 +3,7 @@ import { Component, inject, OnInit } from '@angular/core';
 // 1. importar el servicio porque queremos hacer get de los productos
 import { ProductService } from '../../services/products';
 import { Product } from '../../interfaces/product';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-card',
@@ -23,6 +24,7 @@ export class Card implements OnInit {
   // texto :string = ''; 
   // buleano : boolean = false;
   allProducts: Product[] = []; // vamos a almacenar todos los productos de la base de datos
+  baseUrl : string = environment.appUrl;
 
 
   showProducts() {
