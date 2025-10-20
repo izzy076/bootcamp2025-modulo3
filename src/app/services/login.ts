@@ -29,6 +29,7 @@ export class LoginService {
   }
 
   // Validar si el rol de administrador o no
+  // este método retorno TRUE o FALSE -> dependiendo de si es administrador o no
   isAdmin(){
     // primero necesitamos ontener el token
     const token = this.getToken();
