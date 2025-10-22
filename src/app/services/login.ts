@@ -46,7 +46,7 @@ export class LoginService {
   }
 
   // Redirección una vez que ya inició sesión
-  redirecTo(){
+  redirectTo(){
   // si es administador, que redireccione a /admin
   if(this.isAdmin()){
     this._router.navigate(["/dashboard"]);

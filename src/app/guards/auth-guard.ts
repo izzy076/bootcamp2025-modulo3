@@ -15,6 +15,7 @@ export const authGuard: CanActivateFn = (route, state) => {
   // 1. Validación 1: Ya inició sesión?
   if (!_loginService.isLoggedIn()) {
     // redireccione a inicio de sesión
+    alert("No ha iniciado sesión");
     _router.navigate(["/login"]);
     return false;
   }

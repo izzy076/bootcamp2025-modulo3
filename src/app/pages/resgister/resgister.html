@@ -1,7 +1,7 @@
 <main>
 
 
-  <form class="formulario" [formGroup]="registerForm">
+  <form class="formulario" [formGroup]="registerForm" (ngSubmit)="handleSubmit()">
     <h1>Registro</h1>
 
     <!-- Nombre completo -->
@@ -12,6 +12,8 @@
         class="form-control"
         id="nombre"
         formControlName="name"
+        placeholder="Ingrese nombre completo"
+        required
         />
       </div>
       
@@ -23,6 +25,9 @@
         class="form-control"
         id="username"
         formControlName="username"
+        autocomplete="username"
+        placeholder="Ingrese su nombre de usuario"
+        required
         />
       </div>
       
@@ -34,6 +39,9 @@
         class="form-control"
         id="correo"
         formControlName="email"
+        autocomplete="email"
+        placeholder="Ingrese su correo"
+        required
         />
     </div>
 
@@ -45,6 +53,8 @@
         class="form-control"
         id="edad"
         formControlName="age"
+        placeholder="Ingrese su edad"
+        required
       />
     </div>
 
@@ -56,9 +66,12 @@
        class="form-control"
        id="contrasena"
        formControlName="password"
+       autocomplete="new-password"
+       placeholder="Ingrese su contraseña"
       />
     </div>
-
+    <!-- validaciones vanilla, y formularios basados en plantillas Template Form -->
+     <!-- Required -->
     <!-- btn para iniciar sesión -->
     <button type="submit" class="btn">Iniciar Sesión</button>
   </form>

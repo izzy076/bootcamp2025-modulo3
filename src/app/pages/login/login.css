@@ -1,13 +1,13 @@
 main{
     border: solid red;
     width: 100vw;
-    height: 100vh;
+    height: 60vh;
 }
 
 .formulario{
     border: solid blue;
     width: 40%;
-    margin: 200px auto;
+    margin: 120px auto;
     display: flex;
     flex-direction: column;
     gap: 20px;
